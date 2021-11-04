@@ -1,5 +1,3 @@
-# SecureWebVPN
-
 ## Build Setup
 
 ```bash
