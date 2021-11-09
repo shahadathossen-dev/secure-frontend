@@ -102,18 +102,20 @@ export default {
   methods: {
     async login() {
       try {
-        const token = await this.$recaptcha.execute('login')
-        this.form.recaptcha = token
+        const recaptcha = await this.$recaptcha.execute('login')
+        this.form.recaptcha = recaptcha
         await this.$auth.loginWith('laravelSanctum', {
           data: this.form,
         })
       } catch (error) {
-        this.$toast.error(`${error.response.status} ${error.response.data.message}`)
+        this.$toast.error(
+          `${error.response.status} ${error.response.data.message}`
+        )
       }
     },
   },
   beforeDestroy() {
     this.$recaptcha.destroy()
-  }
+  },
 }
 </script>

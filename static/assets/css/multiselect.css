@@ -1,0 +1,127 @@
+.multiselect {
+  border-radius: 7px;
+  border: none;
+  background-color: #eff6fb;
+  height: 60px;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.multiselect:hover {
+  cursor: pointer;
+}
+
+.multiselect__select {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  right: 1px;
+  top: 1px;
+  padding: 4px 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.multiselect__current,
+.multiselect__select {
+  line-height: 16px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.multiselect--active .multiselect__select {
+  transform: rotate(180deg);
+}
+
+.multiselect__select::before {
+  position: relative;
+  right: 0;
+  top: 55%;
+  color: #999;
+  margin-top: 4px;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  border-color: #999 transparent transparent;
+  content: '';
+}
+
+.multiselect__single,
+.multiselect__input,
+.multiselect__placeholder {
+  border-radius: 7px;
+  background-color: #eff6fb;
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.multiselect__content-wrapper {
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  background: #fff;
+  width: 100%;
+  max-height: 240px;
+  overflow: auto;
+  border: 1px solid #e8e8e8;
+  border-top-color: rgb(232, 232, 232);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 50;
+  -webkit-overflow-scrolling: touch;
+}
+.multiselect__option.multiselect__option--selected {
+  background-color: #EFF6FB;
+}
+.multiselect--above .multiselect__content-wrapper {
+  bottom: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: none;
+  border-top: 1px solid #e8e8e8;
+}
+
+.multiselect__content {
+  width: 100%;
+}
+.multiselect__option {
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.multiselect__option:hover {
+  background-color: #eff6fb;
+}
+
+.option__image {
+  @apply mt-1.5;
+}
+
+.option__desc {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.option__title {
+  color: #495057;
+}
+
+.option__small {
+  font-size: 12px;
+  color: #aaaf94;
+}

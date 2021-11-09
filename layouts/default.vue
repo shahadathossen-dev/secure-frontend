@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Preloader -->
-    <pre-loader></pre-loader>
+    <!-- <pre-loader></pre-loader> -->
     <!-- End Preloader -->
     <!-- OffCanvas Menu -->
     <off-canvas></off-canvas>
@@ -24,3 +24,13 @@
     <!-- End Back to Top Button -->
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    const theme = document.createElement('script')
+    theme.src = '/assets/js/main.js'
+    document.body.appendChild(theme)
+  }
+}
+</script>

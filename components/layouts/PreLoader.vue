@@ -13,16 +13,22 @@
 
 <script>
 export default {
-  data() {
-    return {
-      loading: true,
+  props: {
+    loading: {
+      type: Boolean,
+      required: true
     }
   },
-  /*
-   ** programmatically start the loader so we force the page to take x2seconds to load
-   */
-  mounted() {
-    setTimeout(() => (this.loading = false), 2000)
-  },
+  // data() {
+  //   return {
+  //     loading: true,
+  //   }
+  // },
+  // /*
+  //  ** programmatically start the loader so we force the page to take x2seconds to load
+  //  */
+  // mounted() {
+  //   setTimeout(() => (this.loading = false), 2000)
+  // },
 }
 </script>

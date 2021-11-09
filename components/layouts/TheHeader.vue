@@ -149,7 +149,10 @@
                       </nuxt-link>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" @click.prevent="$auth.logout()">
+                      <a
+                        href="javascript:void(0)"
+                        @click.prevent="$auth.logout()"
+                      >
                         {{ $t('buttons.logout') }}
                       </a>
                     </li>
@@ -190,8 +193,7 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$auth.loggedIn)
-  },
+  methods: {},
+  mounted() {},
 }
 </script>

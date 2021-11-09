@@ -1966,6 +1966,7 @@ blockquote cite:after {
   top: 0;
   bottom: 0;
   right: 0;
+  opacity: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1975,7 +1976,7 @@ blockquote cite:after {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #333366;
+  background-color: #6A6A9D;
   z-index: 99999;
 }
 

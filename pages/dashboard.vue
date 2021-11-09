@@ -36,5 +36,16 @@
 <script>
 export default {
   middleware: ['auth', 'verified'],
+  name: 'dashboard',
+  data() {
+    return {
+      message: 'Your purchase is successfully done.',
+    }
+  },
+  created() {
+    if (this.$route.query.payment_status === 'success') {
+      this.$toast.success(this.message)
+    }
+  },
 }
 </script>

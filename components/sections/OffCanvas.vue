@@ -12,12 +12,7 @@
           <a href="#"><img src="assets/img/sticky-logo.png" alt="" /></a>
         </div>
         <!-- End Widget Logo -->
-        <p>
-          <span class="text-2xl">
-            {{ country.emoji }}
-          </span>
-          Bangladesh
-        </p>
+
         <!-- Widget About -->
         <div class="widget widget_about">
           <h3 class="widget-title">About us</h3>

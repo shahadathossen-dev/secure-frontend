@@ -72,10 +72,10 @@
 
 <script>
 export default {
-  middleware: ['auth'],
+  middleware: ['auth', 'unverified'],
   async asyncData({ $auth }) {
     return {
-      verified: $auth?.user.email_verified_at,
+      verified: $auth?.user.emailVerifiedAt,
     }
   },
   data() {

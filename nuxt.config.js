@@ -21,20 +21,17 @@ export default {
       }
     ],
     script: [
-      { src: '/assets/js/jquery.min.js' },
-      { src: '/assets/js/bootstrap.bundle.min.js' },
+      { src: '/assets/js/jquery.min.js', body: true },
+      { src: '/assets/js/bootstrap.bundle.min.js', body: true },
       { src: '/assets/js/menu.min.js', body: true },
       { src: '/assets/plugins/retinajs/retina.min.js', body: true },
       { src: '/assets/plugins/magnific-popup/jquery.magnific-popup.min.js', body: true },
       { src: '/assets/plugins/countdown-timer/countdown.min.js', body: true },
-      { src: '/assets/js/main.js', body: true, defer: true },
-      { src: '/assets/js/custom.js', body: true, defer: true },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // "~/node_modules/bootstrap/dist/css/bootstrap.css",
     "@/static/assets/css/bootstrap.min.css",
     "@/static/assets/css/font-awesome.min.css",
     '@/static/assets/plugins/magnific-popup/magnific-popup.css',
@@ -49,10 +46,13 @@ export default {
     '~/plugins/axios',
     // provide validation errors globally
     '~/plugins/mixins/validation',
+    // https://www.npmjs.com/package/@stripe/stripe-js
+    { src: '~/plugins/nuxt-stripe', ssr: false },
+    // https://www.npmjs.com/package/@paypal/paypal-js
+    { src: '~/plugins/nuxt-paypal', ssr: false },
+    // https://getbootstrap.com/docs
+    // { src: '~/plugins/bootstrap', ssr: false },
   ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -94,9 +94,12 @@ export default {
   },
 
   publicRuntimeConfig: {
+    appUrl: process.env.APP_URL || 'http://localhost:3000',
     apiUrl: process.env.API_URL || 'http://localhost:8000/api',
     apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:8000',
     apiAuthUrl: process.env.API_AUTH_URL || 'http://localhost:8000/auth',
+    stripePublishableKey: process.env.STRIPE_KEY,
+    paypalSandboxId: process.env.PAYPAL_SANDBOX_ID,
   },
 
   auth: {
@@ -107,20 +110,6 @@ export default {
         user: {
           property: "data"
         },
-        // endpoints: {
-        //   csrf: {
-        //     url: "/sanctum/csrf-cookie",
-        //   },
-        //   login: {
-        //     url: "/auth/login",
-        //   },
-        //   logout: {
-        //     url: "/auth/logout",
-        //   },
-        //   user: {
-        //     url: "/api/user",
-        //   }
-        // }
       },
     },
     redirect: {
@@ -191,13 +180,14 @@ export default {
     /**
      * add external plugins
      */
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-      })
-    ]
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     $: 'jquery',
+    //     jQuery: 'jquery',
+    //     jquery: 'jquery',
+    //     'window.jQuery': 'jquery'
+    //   })
+    // ]
   },
 
   /*
@@ -206,6 +196,7 @@ export default {
   components: {
     dirs: [
       '~/components',
+      '~/components/forms',
       '~/components/layouts',
       '~/components/sections',
     ],
@@ -216,4 +207,11 @@ export default {
    */
   //  loading: '~/components/PreLoader.vue',
   //  ssr: false
+
+  // Server configuration
+  server: {
+    port: 3000 // default: 3000
+  },
+
+  // ssr: false,
 }
