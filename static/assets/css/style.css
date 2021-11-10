@@ -4127,8 +4127,14 @@ BOX-SIX
   padding-bottom: 100px;
 }
 
+.content-404 {
+  text-align: center;
+}
+
 .content-404 > img {
-  margin-bottom: 67px;
+  margin-bottom: 30px;
+  max-height: 240px;
+  display: inline;
 }
 
 .content-404 h1 {

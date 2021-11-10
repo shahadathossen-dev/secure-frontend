@@ -109,7 +109,7 @@
 }
 
 .option__image {
-  @apply mt-1.5;
+  /* @apply mt-1.5; */
 }
 
 .option__desc {

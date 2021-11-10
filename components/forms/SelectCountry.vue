@@ -16,7 +16,7 @@
       @select="$emit('select', selectedValue)"
     >
       <template slot="singleLabel" slot-scope="props">
-        <div class="option__image text-5xl">
+        <div class="option__image text-4xl">
           {{ props.option.emoji }}
         </div>
         <div class="option__desc">
@@ -29,7 +29,7 @@
         </div>
       </template>
       <template slot="option" slot-scope="props">
-        <div class="option__image text-5xl" :alt="props.option.code">
+        <div class="option__image text-4xl" :alt="props.option.code">
           {{ props.option.emoji }}
         </div>
         <div class="option__desc">
