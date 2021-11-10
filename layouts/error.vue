@@ -19,7 +19,7 @@
           <div class="col-12">
             <!-- 404 Content -->
             <div class="content-404">
-              <img src="assets/img/media/404-img.png" data-rjs="2" alt="" />
+              <img src="/assets/img/media/404-img.png" data-rjs="2" alt="" />
               <h1>uh-oh page not found...</h1>
               <p>
                 Oops! The page you are looking for does not exist. Please return
@@ -29,7 +29,7 @@
 
               <nuxt-link :to="localePath('/')" class="btn-link">
                 <img
-                  src="assets/img/icons/left-arrow.svg"
+                  src="/assets/img/icons/left-arrow.svg"
                   alt=""
                   class="svg mr-2"
                 />
