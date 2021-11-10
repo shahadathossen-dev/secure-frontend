@@ -10,7 +10,7 @@
         <!-- End Grid Animation -->
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-8">
               <form class="neee-validation" @submit.prevent="register">
                 <div class="card">
                   <div class="card-header">
