@@ -1,5 +1,5 @@
 <template>
-  <loading-card :loading="$fetchState.pending">
+  <loading-card :loading="false">
     <main>
       <div
         class="page-title-wrap"
