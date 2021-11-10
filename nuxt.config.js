@@ -94,10 +94,10 @@ export default {
   },
 
   publicRuntimeConfig: {
-    appUrl: process.env.APP_URL || 'http://localhost:3000',
-    apiUrl: process.env.API_URL || 'http://localhost:8000/api',
-    apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:8000',
-    apiAuthUrl: process.env.API_AUTH_URL || 'http://localhost:8000/auth',
+    appUrl: process.env.APP_URL || 'http://app.securewebvpn.net',
+    apiUrl: process.env.API_URL || 'http://admin.securewebvpn.net/api',
+    apiBaseUrl: process.env.API_BASE_URL || 'http://admin.securewebvpn.net',
+    apiAuthUrl: process.env.API_AUTH_URL || 'http://admin.securewebvpn.net/auth',
     stripePublishableKey: process.env.STRIPE_KEY,
     paypalSandboxId: process.env.PAYPAL_SANDBOX_ID,
   },

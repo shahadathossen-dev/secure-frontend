@@ -2446,7 +2446,7 @@ BOX-SIX
    02.6: Page Title
    ********************* */
 .page-title-wrap {
-  max-height: 300px;
+  min-height: 500px;
   background-size: cover;
   padding-top: 180px;
   padding-bottom: 100px;
