@@ -18,7 +18,7 @@
         <div class="row">
           <div class="col-12">
             <!-- 404 Content -->
-            <div v-if="error.statusCode === 404" class="content-404">
+            <div v-if="error.statusCode === 404" class="content-error">
               <img src="/assets/img/media/404.png" data-rjs="2" alt="" />
               <h1>uh-oh page not found...</h1>
               <p>
@@ -38,7 +38,7 @@
             </div>
             <!-- End 404 Content -->
             <!-- 403 Content -->
-            <div v-else-if="error.statusCode === 403" class="content-403">
+            <div v-else-if="error.statusCode === 403" class="content-error">
               <img src="/assets/img/media/403.png" data-rjs="2" alt="" />
               <h1>uh-oh page not found...</h1>
               <p>
@@ -58,7 +58,7 @@
             </div>
             <!-- End 403 Content -->
             <!-- 401 Content -->
-            <div v-else-if="error.statusCode === 401" class="content-401">
+            <div v-else-if="error.statusCode === 401" class="content-error">
               <img src="/assets/img/media/401.png" data-rjs="2" alt="" />
               <h1>uh-oh page not found...</h1>
               <p>
@@ -78,7 +78,7 @@
             </div>
             <!-- End 401 Content -->
              <!-- 500 Content -->
-            <div v-else class="content-500">
+            <div v-else class="content-error">
               <img src="/assets/img/media/500.png" data-rjs="2" alt="" />
               <h1>uh-oh page not found...</h1>
               <p>

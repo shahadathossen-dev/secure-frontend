@@ -27,6 +27,7 @@ export default {
       { src: '/assets/plugins/retinajs/retina.min.js', body: true },
       { src: '/assets/plugins/magnific-popup/jquery.magnific-popup.min.js', body: true },
       { src: '/assets/plugins/countdown-timer/countdown.min.js', body: true },
+      { src: '/assets/plugins/owlcarousel/owl.carousel.min.js', body: true },
     ],
   },
 
@@ -35,6 +36,7 @@ export default {
     "@/static/assets/css/bootstrap.min.css",
     "@/static/assets/css/font-awesome.min.css",
     '@/static/assets/plugins/magnific-popup/magnific-popup.css',
+    '@/static/assets/plugins/owlcarousel/owl.carousel.min.css',
     "@/static/assets/css/style.css",
     "@/static/assets/css/custom.css",
   ],

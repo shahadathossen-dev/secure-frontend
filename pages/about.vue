@@ -5,7 +5,7 @@
     <!-- About -->
     <section
       class="about pt-120 pb-90"
-      data-bg-img="assets/img/media/use-govpn-bg.png"
+      data-bg-img="/assets/img/media/use-securewebvpn-bg.png"
     >
       <div class="container">
         <div class="row align-items-center pb-120">

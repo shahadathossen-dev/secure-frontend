@@ -595,7 +595,7 @@ svg path,
 .offcanvas-wrapper,
 .offcanvas-overlay,
 .post-navigation .nav-link .nav-title,
-.content-404 .btn-link svg,
+.content-error .btn-link svg,
 .single-online-thread .img img,
 .tab-wrap .nav-item a.active:after,
 .price-box .price-head .plan,
@@ -3796,7 +3796,7 @@ BOX-SIX
 
 .img img {
   display: inline;
-  max-width: 60px;
+  max-width: 90px;
 }
 
 .entry-content a,
@@ -4127,42 +4127,42 @@ BOX-SIX
   padding-bottom: 100px;
 }
 
-.content-404 {
+.content-error {
   text-align: center;
 }
 
-.content-404 > img {
+.content-error > img {
   margin-bottom: 30px;
   max-height: 240px;
   display: inline;
 }
 
-.content-404 h1 {
+.content-error h1 {
   color: #3c4858;
   margin-bottom: 36px;
 }
 
-.content-404 > p {
+.content-error > p {
   margin-bottom: 20px;
   font-size: 18px;
 }
 
 @media only screen and (max-width: 767px) {
-  .content-404 > p br {
+  .content-error > p br {
     display: none;
   }
 }
 
-.content-404 .btn-link svg {
+.content-error .btn-link svg {
   right: 0;
 }
 
-.content-404 .btn-link:hover svg {
+.content-error .btn-link:hover svg {
   right: 2px;
   position: relative;
 }
 
-.content-404 .btn-link:hover svg path {
+.content-error .btn-link:hover svg path {
   fill: #00e3f7;
   stroke: #00e3f7;
 }
