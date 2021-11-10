@@ -2,5 +2,6 @@ module.exports = {
   about: 'About',
   contact: 'Contact',
   home: 'Home',
-  pricing: 'Pricing'
+  pricing: 'Pricing',
+  faqs: 'FAQs'
 }

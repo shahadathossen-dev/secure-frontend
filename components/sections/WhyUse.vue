@@ -72,7 +72,7 @@
                   <div class="col-lg-6">
                     <div class="tab-img">
                       <img
-                        src="assets/img/media/tab1.png"
+                        src="assets/img/media/basic-protection.jpg"
                         data-rjs="2"
                         alt=""
                       />
@@ -117,7 +117,7 @@
                   <div class="col-lg-6">
                     <div class="tab-img">
                       <img
-                        src="assets/img/media/tab2.png"
+                        src="assets/img/media/browsing-history.jpg"
                         data-rjs="2"
                         alt=""
                       />
@@ -166,7 +166,7 @@
                   <div class="col-lg-6">
                     <div class="tab-img">
                       <img
-                        src="assets/img/media/tab1.png"
+                        src="assets/img/media/restricted-content.jpg"
                         data-rjs="2"
                         alt=""
                       />
@@ -210,7 +210,7 @@
                 <div class="row align-items-center">
                   <div class="col-lg-6">
                     <div class="tab-img">
-                      <img src="assets/img/media/tab2.png" alt="" />
+                      <img src="assets/img/media/browse-privately.jpg" alt="" />
                     </div>
                   </div>
                   <div class="col-lg-6">

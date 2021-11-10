@@ -49,12 +49,13 @@ export default {
   },
   methods: {
     async checkout() {
+      const self = this
       try {
         await this.$stripe.confirmPayment({
           elements: this.elements,
           description: 'Package subscription',
           confirmParams: {
-            return_url: `${this.$config.appUrl}/dashboard?payment_status=success`,
+            return_url: self.localePath({path: `/dashboard?payment_status=success`}),
           },
         })
       } catch (error) {
@@ -62,7 +63,7 @@ export default {
       }
     }
   },
-  fetchOnServer: false,
+  // fetchOnServer: false,
   async fetch() {
     const { data } = await this.$axios.post('stripe/checkout')
     this.clientSecret = data.clientSecret
@@ -77,5 +78,8 @@ export default {
       card.on('ready', event => this.cardLoading = false)
     }
   },
+  beforeDestroy() {
+    this.elements?.getElement('payment').destroy()
+  }
 }
 </script>

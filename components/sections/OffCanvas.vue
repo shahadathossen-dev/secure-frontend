@@ -1,7 +1,7 @@
 <template>
   <div class="offcanvas_menu">
     <div class="offcanvas-overlay fixed-top w-100 h-100"></div>
-    <div class="offcanvas-wrapper fixed-top h-100">
+    <div class="offcanvas-wrapper fixed-top h-100 trans4">
       <div class="offcanvas-close position-absolute">
         <i class="fa fa-times"></i>
       </div>

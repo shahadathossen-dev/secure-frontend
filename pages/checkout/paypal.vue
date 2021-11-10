@@ -66,7 +66,7 @@ export default {
   async fetch() {
     const { data } = await this.$axios.post('paypal/checkout')
     this.amount = data.amount
-    const that = this
+    const self = this
     if (this.$paypal) {
       this.$paypal
         .Buttons({
@@ -80,7 +80,7 @@ export default {
                 {
                   amount: {
                     currency_code: 'USD',
-                    value: that.amount,
+                    value: self.amount,
                   },
                 },
               ],
@@ -93,10 +93,11 @@ export default {
             return await actions.order.capture().then(function (details) {
               // This function shows a transaction success message to your buyer.
               // console.log(details)
-              that.$router.push(that.localePath({path: `/dashboard?payment_status=success`}))
-              // that.$toast.success(
-              //   `Transaction completed by ${details.payer.name.given_name} ${details.payer.name.surname}`
-              // )
+              self.$toast.success(
+                `Transaction completed by ${details.payer.name.given_name} ${details.payer.name.surname}`
+              )
+              self.$router.push(self.localePath({path: `/dashboard?payment_status=success`}))
+
             })
           },
 

@@ -24,7 +24,7 @@
     <!-- End Why Use Secure Web VPN -->
 
     <!-- Call To Action -->
-    <call-to-action></call-to-action>
+    <!-- <call-to-action></call-to-action> -->
     <!-- End Call To Action -->
 
     <!-- Price -->

@@ -1,12 +1,12 @@
 <template>
   <section class="pt-120 pb-120 pb-xl-5">
     <div class="container">
-      <div class="row">
+      <div class="row items-center">
         <div class="col-lg-6">
           <!-- All Country Image -->
           <div class="all-country-img">
             <img
-              src="assets/img/media/all-country-img.png"
+              src="assets/img/media/find-everywhere.jpg"
               data-rjs="2"
               alt=""
             />
@@ -16,7 +16,7 @@
         <div class="col-lg-6">
           <!-- Section Title -->
           <div class="section-title style--two">
-            <h2>Finds Secure Web VPN Services Where You Need</h2>
+            <h2>Find Secure Web VPN Services Where You Need</h2>
             <p>
               Data thieves look for unprotected devices & those that do not use
               to this encryption are easy targets. These types of attacks are

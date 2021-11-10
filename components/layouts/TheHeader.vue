@@ -83,6 +83,12 @@
                       <span class="menu-mark"></span>
                     </nuxt-link>
                   </li>
+                  <li>
+                    <nuxt-link :to="localePath('/faqs')" class="card-link">
+                      {{ $t('menu.faqs') }}
+                      <span class="menu-mark"></span>
+                    </nuxt-link>
+                  </li>
                 </ul>
                 <!-- End Nav -->
               </div>
