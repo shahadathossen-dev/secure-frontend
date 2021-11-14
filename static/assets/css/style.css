@@ -3145,7 +3145,7 @@ BOX-SIX
   letter-spacing: 1px;
 }
 
-.header-main ul li a.current-menu-parent .menu-mark,
+.header-main ul li a.nuxt-link-exact-active .menu-mark,
 .header-main ul li a:hover .menu-mark {
   opacity: 1;
   visibility: visible;
@@ -3186,7 +3186,14 @@ BOX-SIX
 .header-main .flag-dropdown {
   position: relative;
 }
-
+.header-main .flag-dropdown ul.dropdown-menu li a.nuxt-link-exact-active {
+  color: #16149f;
+}
+.header-main
+  .flag-dropdown
+  ul.dropdown-menu
+  li
+  a.nuxt-link-exact-active::before,
 .header-main .flag-dropdown ul.dropdown-menu li:hover a::before {
   opacity: 1;
   visibility: visible;
