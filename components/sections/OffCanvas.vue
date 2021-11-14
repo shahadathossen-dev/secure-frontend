@@ -74,7 +74,7 @@
       <!-- Widget Social Icon -->
       <div class="widget widget_social_links border-top mt-5">
         <!-- <h3 class="widget-title">Follow Us On:</h3> -->
-        <div class="social-links">
+        <!-- <div class="social-links">
           <a
             class="d-inline-flex align-items-center justify-content-center"
             href="https://www.facebook.com"
@@ -99,7 +99,7 @@
           >
             <i class="fa fa-instagram"></i>
           </a>
-        </div>
+        </div> -->
       </div>
       <!-- End Widget Social Icon -->
     </div>

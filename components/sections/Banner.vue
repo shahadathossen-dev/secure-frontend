@@ -19,13 +19,10 @@
             </p>
 
             <div class="banner-btn-group">
-              <a href="price.html" class="btn"
-                ><img
-                  src="assets/img/icons/btn-svg.svg"
-                  alt=""
-                  class="svg"
-                />Protect yourself</a
-              >
+              <nuxt-link class="btn" :to="localePath('/pricing')">
+                <img src="assets/img/icons/btn-svg.svg" alt="" class="svg" />
+                Protect yourself
+              </nuxt-link>
 
               <a
                 href="https://www.youtube.com/watch?v=ni5hRK1ehzk"

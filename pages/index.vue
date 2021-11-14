@@ -15,6 +15,10 @@
     <banner></banner>
     <!-- End Banner -->
 
+    <!-- Price -->
+    <pricing></pricing>
+    <!-- End Price -->
+
     <!-- Online Thread -->
     <online-threat></online-threat>
     <!-- End Online Thread -->
@@ -26,10 +30,6 @@
     <!-- Call To Action -->
     <!-- <call-to-action></call-to-action> -->
     <!-- End Call To Action -->
-
-    <!-- Price -->
-    <pricing></pricing>
-    <!-- End Price -->
 
     <!-- All Country -->
     <world-wide></world-wide>
