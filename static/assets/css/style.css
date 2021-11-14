@@ -2885,6 +2885,9 @@ BOX-SIX
 }
 
 @media only screen and (max-width: 991px) {
+  .header-top {
+    display: none;
+  }
   .header-main.sticky .menu-mark {
     display: none;
   }

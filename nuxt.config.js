@@ -48,12 +48,12 @@ export default {
     '~/plugins/axios',
     // provide validation errors globally
     '~/plugins/mixins/validation',
+    // provide user location
+    '~/plugins/location',
     // https://www.npmjs.com/package/@stripe/stripe-js
     { src: '~/plugins/nuxt-stripe', ssr: false },
     // https://www.npmjs.com/package/@paypal/paypal-js
     { src: '~/plugins/nuxt-paypal', ssr: false },
-    // https://getbootstrap.com/docs
-    // { src: '~/plugins/bootstrap', ssr: false },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -100,6 +100,7 @@ export default {
     apiUrl: process.env.API_URL,
     apiBaseUrl: process.env.API_BASE_URL,
     apiAuthUrl: process.env.API_AUTH_URL,
+    locationApiKey: process.env.LOCATION_API_KEY,
     stripePublishableKey: process.env.STRIPE_KEY,
     paypalSandboxId: process.env.PAYPAL_SANDBOX_ID,
   },

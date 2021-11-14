@@ -1,34 +1,46 @@
 <template>
-  <header class="header fixed-top">
-    <!-- Header Main -->
-    <div class="header-main love-sticky">
+  <header>
+    <div class="header-top">
       <div class="container">
-        <div class="row align-items-center position-relative">
-          <div class="col-lg-2 col-sm-3 col-5">
-            <!-- Start Logo -->
-            <div class="logo">
-              <a href="index.html">
-                <img src="/assets/img/logo.png" class="main-logo" alt="" />
-                <img
-                  src="/assets/img/sticky-logo.png"
-                  class="sticky-logo"
-                  alt=""
-                />
-              </a>
-            </div>
-            <!-- End of Logo -->
+        <div class="grid grid-cols-3">
+          <div class="text-left">Your IP: {{ location.query }}</div>
+          <div class="text-center">Your ISP: {{ location.isp }}</div>
+          <div class="text-right">
+            Location: {{ `${location.city}, ${location.country}` }}
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="header fixed-top">
+      <!-- Header Main -->
+      <div class="header-main love-sticky">
+        <div class="container">
+          <div class="row align-items-center position-relative">
+            <div class="col-lg-2 col-sm-3 col-5">
+              <!-- Start Logo -->
+              <div class="logo">
+                <a href="index.html">
+                  <img src="/assets/img/logo.png" class="main-logo" alt="" />
+                  <img
+                    src="/assets/img/sticky-logo.png"
+                    class="sticky-logo"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <!-- End of Logo -->
+            </div>
 
-          <div
-            class="
-              col-lg-10 col-sm-9 col-7
-              d-flex
-              align-items-center
-              justify-content-end
-              position-static
-            "
-          >
-            <client-only>
+            <div
+              class="
+                col-lg-10 col-sm-9 col-7
+                d-flex
+                align-items-center
+                justify-content-end
+                position-static
+              "
+            >
+              <!-- <client-only> -->
               <div
                 class="
                   nav-wrapper
@@ -92,114 +104,124 @@
                 </ul>
                 <!-- End Nav -->
               </div>
-            </client-only>
+              <!-- </client-only> -->
 
-            <div class="d-flex align-items-center mr-2 mr-sm-3">
-              <!-- Language -->
-              <div class="flag-dropdown">
-                <button
-                  class="dropdown-btn d-flex align-items-center"
-                  data-toggle="dropdown"
-                >
-                  <img src="/assets/img/icons/flag.png" alt="" class="flag" />
-                  <img
-                    src="/assets/img/icons/down-arrow.svg"
-                    alt=""
-                    class="svg arrow"
-                  />
-                </button>
+              <div class="d-flex align-items-center mr-2 mr-sm-3">
+                <!-- Language -->
+                <!-- <div class="flag-dropdown">
+                  <button
+                    class="dropdown-btn d-flex align-items-center"
+                    data-toggle="dropdown"
+                  >
+                    <img src="/assets/img/icons/flag.png" alt="" class="flag" />
+                    <img
+                      src="/assets/img/icons/down-arrow.svg"
+                      alt=""
+                      class="svg arrow"
+                    />
+                  </button>
 
-                <ul class="dropdown-menu">
-                  <li v-for="lang of $i18n.locales" :key="`lang-${lang.name}`">
-                    <nuxt-link
-                      class="dropdown-lang"
-                      :to="switchLocalePath(lang.code)"
+                  <ul class="dropdown-menu">
+                    <li
+                      v-for="lang of $i18n.locales"
+                      :key="`lang-${lang.name}`"
                     >
-                      <img :src="lang.flag" alt="" />
-                      &nbsp;{{ lang.name }}
-                    </nuxt-link>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Language -->
-              <!-- Language -->
-              <div class="flag-dropdown">
-                <button
-                  class="dropdown-btn d-flex align-items-center"
-                  data-toggle="dropdown"
-                >
-                  <img
-                    src="/assets/img/icons/user.svg"
-                    alt=""
-                    style="width: 25px"
-                    class="flag"
-                  />
-                  <img
-                    src="/assets/img/icons/down-arrow.svg"
-                    alt=""
-                    class="svg arrow"
-                  />
-                </button>
-
-                <ul class="dropdown-menu">
-                  <template v-if="$auth.loggedIn">
-                    <p class="mb-0 px-2">{{ $auth.user.name }}</p>
-                    <li>
-                      <nuxt-link :to="localePath('/profile')">
-                        {{ $t('buttons.profile') }}
-                      </nuxt-link>
-                    </li>
-                    <li>
-                      <nuxt-link :to="localePath('/dashboard')">
-                        {{ $t('buttons.dashboard') }}
-                      </nuxt-link>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        @click.prevent="$auth.logout()"
+                      <nuxt-link
+                        class="dropdown-lang"
+                        :to="switchLocalePath(lang.code)"
                       >
-                        {{ $t('buttons.logout') }}
-                      </a>
-                    </li>
-                  </template>
-                  <template v-else>
-                    <li>
-                      <nuxt-link :to="localePath('/login')">
-                        {{ $t('buttons.login') }}
+                        <img :src="lang.flag" alt="" />
+                        &nbsp;{{ lang.name }}
                       </nuxt-link>
                     </li>
-                    <li>
-                      <nuxt-link :to="localePath('/register')">
-                        {{ $t('buttons.register') }}
-                      </nuxt-link>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-              <!-- End Language -->
-            </div>
+                  </ul>
+                </div> -->
+                <!-- End Language -->
+                <!-- Language -->
+                <div class="flag-dropdown">
+                  <button
+                    class="dropdown-btn d-flex align-items-center"
+                    data-toggle="dropdown"
+                  >
+                    <img
+                      src="/assets/img/icons/user.svg"
+                      alt=""
+                      style="width: 25px"
+                      class="flag"
+                    />
+                    <img
+                      src="/assets/img/icons/down-arrow.svg"
+                      alt=""
+                      class="svg arrow"
+                    />
+                  </button>
 
-            <!-- Menu Trigger -->
-            <div class="offcanvas-trigger">
-              <img
-                src="/assets/img/icons/ofcanvas-trigar.svg"
-                alt=""
-                class="svg"
-              />
+                  <ul class="dropdown-menu">
+                    <template v-if="$auth.loggedIn">
+                      <p class="mb-0 px-2">{{ $auth.user.name }}</p>
+                      <li>
+                        <nuxt-link :to="localePath('/profile')">
+                          {{ $t('buttons.profile') }}
+                        </nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link :to="localePath('/dashboard')">
+                          {{ $t('buttons.dashboard') }}
+                        </nuxt-link>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0)"
+                          @click.prevent="$auth.logout()"
+                        >
+                          {{ $t('buttons.logout') }}
+                        </a>
+                      </li>
+                    </template>
+                    <template v-else>
+                      <li>
+                        <nuxt-link :to="localePath('/login')">
+                          {{ $t('buttons.login') }}
+                        </nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link :to="localePath('/register')">
+                          {{ $t('buttons.register') }}
+                        </nuxt-link>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+                <!-- End Language -->
+              </div>
+
+              <!-- Menu Trigger -->
+              <div class="offcanvas-trigger">
+                <img
+                  src="/assets/img/icons/ofcanvas-trigar.svg"
+                  alt=""
+                  class="svg"
+                />
+              </div>
+              <!-- End Menu Trigger -->
             </div>
-            <!-- End Menu Trigger -->
           </div>
         </div>
       </div>
+      <!-- End Header Main -->
     </div>
-    <!-- End Header Main -->
   </header>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   methods: {},
   mounted() {},
+  computed: {
+    ...mapGetters({
+      location: 'location/getState',
+    }),
+  },
 }
 </script>

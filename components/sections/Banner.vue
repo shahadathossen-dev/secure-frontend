@@ -24,7 +24,7 @@
                   src="assets/img/icons/btn-svg.svg"
                   alt=""
                   class="svg"
-                />Get securewebvpn</a
+                />Protect yourself</a
               >
 
               <a

@@ -27,7 +27,7 @@
         <div class="widget widget_ip">
           <h3 class="widget-title">Your IP Address:</h3>
           <ul>
-            <li>103.237.76.105</li>
+            <li>{{ location.query }}</li>
           </ul>
         </div>
         <!-- End Widget IP -->
@@ -35,12 +35,19 @@
         <!-- Widget About -->
         <div class="widget widget_about">
           <h3 class="widget-title">Your ISP:</h3>
-          <p>KS Network Limited</p>
+          <p>{{ location.isp }}</p>
+        </div>
+        <!-- End Widget About -->
+
+        <!-- Widget Location -->
+        <div class="widget widget_lcoation">
+          <h3 class="widget-title">Your Location:</h3>
+          <p>Location: {{ `${location.city}, ${location.country}` }}</p>
         </div>
         <!-- End Widget About -->
 
         <!-- Widget  Contact -->
-        <div class="widget widget_contact">
+        <!-- <div class="widget widget_contact">
           <h3 class="widget-title">Get In Touch</h3>
           <ul>
             <li>
@@ -60,7 +67,7 @@
               Division St, New York NY 10002, USA
             </li>
           </ul>
-        </div>
+        </div> -->
         <!-- End Widget Contact -->
       </div>
 
@@ -100,21 +107,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  data() {
-    return {
-      country: {
-        alpha2: 'BD',
-        alpha3: 'BGD',
-        countryCallingCodes: ['+880'],
-        currencies: ['BDT'],
-        emoji: '🇧🇩',
-        ioc: 'BAN',
-        languages: ['ben'],
-        name: 'Bangladesh',
-        status: 'assigned',
-      },
-    }
+  computed: {
+    ...mapGetters({
+      location: 'location/getState',
+    }),
   },
 }
 </script>

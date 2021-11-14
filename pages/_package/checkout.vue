@@ -10,16 +10,9 @@
       <div class="container">
         <div class="row align-items-center pb-120">
           <div class="col-lg-6">
-            <!-- Solution Image -->
-            <div class="about-img">
-              <img src="assets/img/media/about-img.jpg" data-rjs="2" alt="" />
-            </div>
-            <!-- End Solution Image -->
-          </div>
-          <div class="col-lg-6">
             <!-- Section Title -->
             <div class="section-title style--two">
-              <h5>About Provpn</h5>
+              <h5>About Package</h5>
               <h2>Yours simple solutions online privacy.</h2>
               <p>
                 Data thieves look for unprotected devices & those that do not
@@ -47,15 +40,25 @@
               </li>
             </ul>
           </div>
+          <div class="col-lg-6">
+            <!-- Solution Image -->
+            <div class="about-img">
+              <img src="assets/img/media/about-img.jpg" data-rjs="2" alt="" />
+            </div>
+            <!-- End Solution Image -->
+          </div>
+          <!-- Features -->
+          <features></features>
+          <!-- End Features -->
         </div>
       </div>
     </section>
     <!-- End About -->
-
-    <testimonial></testimonial>
   </main>
 </template>
 
 <script>
-export default {}
+import Features from '~/components/sections/Features.vue'
+export default {
+  components: { Features },}
 </script>
